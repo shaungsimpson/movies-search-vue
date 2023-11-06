@@ -3,12 +3,11 @@ defineProps(['movie'])
 </script>
 
 <template>
-    <div>
-        <div>
-            <h3>{{ movie.Title }}({{ movie.Year }})</h3>
-            <img :src="movie.Poster" alt="">
-        </div>
+    <div class="rounded border h-full bg-neutral-600">
+        <img class="rounded-t" :src="movie.Poster" alt="">
+        <h3 class="text-emerald-500 font-bold p-2">{{ movie.Title }} ({{ movie.Year }})</h3>
     </div>
 </template>
 
-<style></style>
+<style>
+</style>
