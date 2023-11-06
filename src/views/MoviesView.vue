@@ -34,7 +34,7 @@ const searchMovies = () => {
                         id="search"
                         v-model="search"
                         name="search"
-                        class="block w-full rounded-md  dark:placeholder:text-emerald-200 placeholder:text-gray-400 dark:bg-gray-700 py-1.5 pl-10 pr-3 text-gray-300 focus:bg-white focus:text-gray-900 focus:ring-0 sm:text-sm sm:leading-6 border-gray-300 border dark:border-gray-700"
+                        class="block w-full rounded-md  dark:placeholder:text-emerald-200 placeholder:text-gray-400 dark:bg-gray-700 py-1.5 pl-10 pr-3 dark:text-gray-300 focus:bg-white focus:text-gray-900 dark:focus:text-gray-300 focus:ring-0 sm:text-sm sm:leading-6 border-gray-300 border dark:border-gray-700"
                         placeholder="Search"
                         type="search"
                         @change="searchMovies"
