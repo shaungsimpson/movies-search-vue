@@ -14,7 +14,7 @@ const props = defineProps({
 <template>
     <div
         class="h-full transition bg-gray-100 border border-gray-300 rounded-lg shadow dark:border-gray-950 dark:bg-slate-700 hover:scale-105">
-        <div v-if="props.image.src" class="w-full h-64 rounded-t-lg">
+        <div v-if="props.image.src" class="aspect-[6/9] w-full rounded-t-lg">
             <img class="object-cover object-center w-full h-full rounded-t-lg"
                 :src="props.image.src" :alt="props.image.alt" />
         </div>
