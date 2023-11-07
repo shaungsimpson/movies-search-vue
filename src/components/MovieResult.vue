@@ -1,16 +1,20 @@
 <script setup>
-defineProps(['movie'])
+import { reactive, ref } from 'vue';
+import BaseCard from './BaseCard.vue';
+
+const props = defineProps(['movie'])
+const image = reactive({
+    src: props.movie?.Poster ?? 'src/assets/image-not-available.png',
+    alt: props.movie?.Title ?? "Image not available",
+})
+const title = ref(`${props.movie?.Title} (${props.movie?.Year})` ?? null)
 </script>
 
 <template>
-    <RouterLink :to="`/movies/${ movie.imdbID }`">
-        <div class="h-full transition bg-gray-100 border border-gray-300 rounded-lg shadow dark:border-gray-950 dark:bg-slate-700 hover:scale-105">
-            <div class="w-full h-64 rounded-t-lg">
-                <img class="object-cover object-center w-full h-full rounded-t-lg" :src="movie.Poster == 'N/A' ? 'src/assets/image-not-available.png' : movie.Poster" alt="" />
-            </div>
-            <h3 class="px-3 py-4">{{ movie.Title }} ({{ movie.Year }})</h3>
-        </div>
+    <RouterLink :to="`/movies/${movie.imdbID}`">
+        <BaseCard :image="image" :title="title" />
     </RouterLink>
 </template>
 
-<style></style>
+<style>
+</style>
