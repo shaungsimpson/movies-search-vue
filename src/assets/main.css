@@ -8,12 +8,15 @@
     font-weight: normal;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  @apply text-slate-800 dark:text-emerald-100;
+h1, h2, h3, h4, h5, h6, p, dl {
+  @apply text-slate-800 dark:text-slate-100;
 }
 h1, h2, h3 {
   @apply font-bold pb-3;
 }
 h1 {
   @apply text-xl;
+}
+dt {
+  @apply font-bold;
 }
