@@ -2,12 +2,19 @@
 import { reactive, ref } from 'vue';
 import BaseCard from './BaseCard.vue';
 
-const props = defineProps(['movie'])
+const props = defineProps({
+    movie: {
+        type: Object,
+        required: true,
+    }
+})
+
 const image = reactive({
-    src: props.movie?.Poster ?? 'src/assets/image-not-available.png',
-    alt: props.movie?.Title ?? "Image not available",
+    src: props.movie?.Poster == 'N/A' ? 'src/assets/image-not-available.png' : props.movie?.Poster ?? null,
+    alt: props.movie?.Poster == 'N/A' ? "Image not available" : `${props.movie?.Title} poster`,
 })
 const title = ref(`${props.movie?.Title} (${props.movie?.Year})` ?? null)
+
 </script>
 
 <template>
