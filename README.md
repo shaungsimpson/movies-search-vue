@@ -1,6 +1,25 @@
 # movie-project
+This is a simple movie API vue 3 project built with vite.
 
-This template should help get you started developing with Vue 3 in Vite.
+## OMDB API Access
+
+In order to get the api working you will need to use an API key, you can [get a free key here](https://www.omdbapi.com/apikey.aspx).
+
+After cloning the repo locally, you can copy the example env file and fill it in.
+
+```bash
+cp .example.env .env
+```
+
+Then replace this line so that the API key replaces the placeholder text in the .env file.
+
+```sh
+VITE_APP_API_KEY="API KEY GOES HERE"
+```
+
+
+> [!WARNING]
+> Do NOT commit sensitive details such as API keys to source control.
 
 ## Recommended IDE Setup
 
